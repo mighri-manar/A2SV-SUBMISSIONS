@@ -1,0 +1,72 @@
+# Problem: Fox And Snake - https://codeforces.com/problemset/problem/510/A
+
+#include<bits/stdc++.h>
+#define ll long long
+#define pb push_back
+#define fast ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+using namespace std;
+int main(){
+    fast;
+    int n, m; cin>>n>>m;
+    if (n==3) {
+        for (int i=1; i<=m; i++)
+        {
+            cout<<"#";
+        }
+        cout<<endl;
+        for( int i=1; i<=m-1; i++)
+        {
+            cout<<".";
+        }
+        cout<<"#"<<endl;
+        for (int i=1; i<=m; i++)
+        {
+            cout<<"#";
+        }
+    }
+    else {
+        for (int i=1; i<=m; i++)
+        {
+            cout<<"#";
+        }
+        cout<<endl;
+        for( int i=1; i<=m-1; i++)
+        {
+            cout<<".";
+        }
+        cout<<"#"<<endl;
+        for (int i=1; i<=m; i++)
+        {
+            cout<<"#";
+        }
+        cout<<endl;
+        for (int j=4; j<=n; j++){
+            if (j%2!=0){
+                for (int i=1; i<=m; i++ )
+                {
+                    cout<<"#";
+                }
+                cout<<endl;
+            }
+            else {
+                if (j % 4 == 0) {
+                    cout << "#";
+                    for (int i = 1; i <= m - 1; i++) {
+                        cout << ".";
+                    }
+                    cout << endl;
+ 
+                } else {
+                    for (int i = 1; i <= m - 1; i++) {
+                        cout << ".";
+                    }
+                    cout << "#";
+                    cout << endl;
+                }
+            }
+        }
+ 
+    }
+        return 0;
+ 
+    }
